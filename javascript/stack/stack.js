@@ -4,6 +4,9 @@
 
 // Stacks are different from queues because insertion and deletion takes place at one end called the top of the stack. This is often called a Last In First Out (LIFO).
 
+/*
+ * ES6 class syntax (constructor function)
+ */
 class Stack {
   // Array is used to implement stack
   constructor() {
@@ -33,9 +36,46 @@ class Stack {
     return this.items[this.items.length - 1];
   }
 
+  // display the contents of the entire stack as a comma-delimited string
   printStack() {
     return this.items.join(`, `);
   }
 }
 
-module.exports = Stack;
+/*
+ * pre-ES6 class syntax (constructor function)
+ */
+function OldStack() {
+  // Array is used to implement stack
+  this.items = [];
+
+  // check if the stack is empty
+  this.isEmpty = function() {
+    return this.items.length === 0;
+  };
+
+  // insert into the stack
+  this.push = function(item) {
+    this.items.push(item);
+  };
+
+  // delete from the stack
+  this.pop = function() {
+    if (this.isEmpty()) {
+      return `Underflow`;
+    }
+    return this.items.pop();
+  };
+
+  // display the contents of the top of the stack (don't delete it)
+  this.peek = function() {
+    return this.items[this.items.length - 1];
+  };
+
+  // display the contents of the entire stack as a comma-delimited string
+  this.printStack = function() {
+    return this.items.join(`, `);
+  };
+}
+
+module.exports = { Stack, OldStack };
