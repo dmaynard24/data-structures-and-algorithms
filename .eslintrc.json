@@ -25,6 +25,7 @@
     "no-plusplus": "off",
     "implicit-arrow-linebreak": "off",
     "no-continue": "off",
-    "no-bitwise": "off"
+    "no-bitwise": "off",
+    "max-classes-per-file": "off"
   }
 }
