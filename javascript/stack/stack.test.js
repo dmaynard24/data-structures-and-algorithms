@@ -17,6 +17,6 @@ test(`expects that calling the pop method on myStack will remove the last item a
   expect(myStack.pop()).toBe(3);
 });
 
-test(`expects that calling the printStack method on myStack will return '1, 2'`, () => {
-  expect(myStack.printStack()).toBe(`1, 2`);
+test(`expects that calling the print method on myStack will return '1, 2'`, () => {
+  expect(myStack.print()).toBe(`1, 2`);
 });

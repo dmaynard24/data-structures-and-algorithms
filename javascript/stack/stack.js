@@ -5,7 +5,7 @@
 // Stacks are different from queues because insertion and deletion takes place at one end called the top of the stack. This is often called a Last In First Out (LIFO).
 
 /*
- * ES6 class syntax (constructor function)
+ * ES6 class syntax
  */
 class Stack {
   // Array is used to implement stack
@@ -37,7 +37,7 @@ class Stack {
   }
 
   // display the contents of the entire stack as a comma-delimited string
-  printStack() {
+  print() {
     return this.items.join(`, `);
   }
 }
@@ -73,7 +73,7 @@ function OldStack() {
   };
 
   // display the contents of the entire stack as a comma-delimited string
-  this.printStack = function() {
+  this.print = function() {
     return this.items.join(`, `);
   };
 }

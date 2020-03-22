@@ -7,7 +7,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "files.eol": "\n",
   "python.pythonPath": "C:\\Users\\dmaynard\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
   "python.linting.pylintEnabled": true,
   "python.linting.enabled": true,
