@@ -42,4 +42,40 @@ class Queue {
   }
 }
 
-module.exports = { Queue };
+/*
+ * pre-ES6 class syntax (constructor function)
+ */
+function OldQueue() {
+  // Array is used to implement queue
+  this.items = [];
+
+  // check if the queue is empty
+  this.isEmpty = function() {
+    return this.items.length === 0;
+  };
+
+  // insert into the queue
+  this.enqueue = function(item) {
+    this.items.push(item);
+  };
+
+  // delete from the queue
+  this.dequeue = function() {
+    if (this.isEmpty()) {
+      return `Underflow`;
+    }
+    return this.items.shift();
+  };
+
+  // display the contents at the head (front) of the queue (don't delete it)
+  this.peek = function() {
+    return this.items[0];
+  };
+
+  // display the contents of the entire queue as a comma-delimited string
+  this.print = function() {
+    return this.items.join(`, `);
+  };
+}
+
+module.exports = { Queue, OldQueue };
