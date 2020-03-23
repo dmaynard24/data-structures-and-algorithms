@@ -1,6 +1,6 @@
 // Hashmap
 
-// A hashmap is a data structure that implements an associative array and stores data in (Key, Value) pairs. To access a value, one must know its key.
+// A hashmap is a data structure that implements an associative array and stores data in key/value pairs. To access a value, one must know its key.
 
 // In JavaScript, there are two built-in objects that can be used to store data in this structure: Map and WeakMap.
 
@@ -30,7 +30,7 @@ class HashMap {
     return false;
   }
 
-  // return an iterator object that contains an array of [key, value] for each element in the map
+  // return an array that contains an array of [key, value] for each element in the map
   entries() {
     return Object.keys(this.map).reduce((a, c) => {
       a.push([c, this.map[c]]);
@@ -48,7 +48,7 @@ class HashMap {
     return this.map[key] !== undefined;
   }
 
-  // returns a new iterator object that contains the keys for each element in the map
+  // returns a new array that contains the keys for each element in the map
   keys() {
     return Object.keys(this.map);
   }
@@ -60,8 +60,10 @@ class HashMap {
     return this.map;
   }
 
-  // returns a new iterator object that contains the values for each element in the map
+  // returns a new array that contains the values for each element in the map
   values() {
     return Object.values(this.map);
   }
 }
+
+module.exports = { HashMap };
