@@ -24,6 +24,7 @@ class HashMap {
   delete(key) {
     if (this.map[key]) {
       delete this.map[key];
+      this.size--;
       return this;
     }
     return false;
@@ -55,6 +56,7 @@ class HashMap {
   // sets the value for the key in the map, returns the map
   set(key, value) {
     this.map[key] = value;
+    this.size++;
     return this.map;
   }
 
