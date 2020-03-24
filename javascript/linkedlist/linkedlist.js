@@ -37,27 +37,36 @@ class LinkedList {
   }
 
   insertAt(index, data) {
-    if (!this.head && index === 0) {
-      this.head = new Node(data);
-    } else {
-      let i = 0;
-      let current = this.head;
-      while (current.next != null && i < index) {
-        current = current.next;
-        i++;
-      }
+    if (index <= this.size) {
       const newNode = new Node(data);
-      newNode.next = current.next;
-      current.next = newNode;
+
+      if (index === 0) {
+        if (!this.head) {
+          this.head = new Node(data);
+        } else {
+          newNode.next = this.head;
+          this.head = newNode;
+        }
+      } else {
+        let i = 0;
+        let current = this.head;
+        while (current.next != null && i < index - 1) {
+          current = current.next;
+          i++;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+      }
+
+      this.size++;
     }
-    this.size++;
   }
 
   removeAt(index) {
     if (this.size >= index) {
       let i = 0;
       let current = this.head;
-      while (i < index) {
+      while (i < index - 1) {
         current = current.next;
         i++;
       }
@@ -90,7 +99,7 @@ class LinkedList {
   }
 
   print() {
-    if (this.size === 0) {
+    if (this.isEmpty()) {
       return ``;
     }
     let result = this.head.data;
@@ -103,4 +112,4 @@ class LinkedList {
   }
 }
 
-module.exports = { LinkedList };
+module.exports = { Node, LinkedList };
