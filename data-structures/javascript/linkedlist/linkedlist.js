@@ -23,7 +23,7 @@ class LinkedList {
     this.size = 0;
   }
 
-  add(data) {
+  append(data) {
     if (!this.head) {
       this.head = new Node(data);
     } else {
@@ -33,6 +33,13 @@ class LinkedList {
       }
       current.next = new Node(data);
     }
+    this.size++;
+  }
+
+  prepend(data) {
+    const newHead = new Node(data);
+    newHead.next = this.head;
+    this.head = newHead;
     this.size++;
   }
 
