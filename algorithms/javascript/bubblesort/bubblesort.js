@@ -10,13 +10,14 @@ function swap(arr, i, j) {
   arr[j] = temp;
 }
 
-function bubbleSort(arr) {
+function bubbleSort(arr, isAscending = true) {
   let isSorted = false;
   let lastUnsorted = arr.length - 1;
   while (!isSorted) {
     isSorted = true;
     for (let i = 0; i < lastUnsorted; i++) {
-      if (arr[i] > arr[i + 1]) {
+      const shouldSwap = isAscending ? arr[i] > arr[i + 1] : arr[i] < arr[i + 1];
+      if (shouldSwap) {
         swap(arr, i, i + 1);
         isSorted = false;
       }
@@ -27,4 +28,4 @@ function bubbleSort(arr) {
   return arr;
 }
 
-console.log(bubbleSort([1, 5, 4, 2]));
+module.exports = { bubbleSort };
