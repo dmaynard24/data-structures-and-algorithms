@@ -1,9 +1,11 @@
-const { bubbleSort } = require(`./bubblesort`);
+const { bubblesort } = require(`./bubblesort`);
 
-test(`sorting the array [1, 5, 4, 2] ascending will return [1, 2, 4, 5]`, () => {
-  expect(bubbleSort([1, 5, 4, 2])).toStrictEqual([1, 2, 4, 5]);
+const arr = [1, 5, 5, 6, 9, 8, 3];
+
+test(`sorting the array [1, 5, 5, 6, 9, 8, 3] in ascending order will return [1, 3, 5, 5, 6, 8, 9]`, () => {
+  expect(bubblesort(arr)).toStrictEqual([1, 3, 5, 5, 6, 8, 9]);
 });
 
-test(`sorting the array [1, 5, 4, 2] ascending will return [5, 4, 2, 1]`, () => {
-  expect(bubbleSort([1, 5, 4, 2], false)).toStrictEqual([5, 4, 2, 1]);
+test(`sorting the array [1, 5, 5, 6, 9, 8, 3] in descending order will return [9, 8, 6, 5, 5, 3, 1]`, () => {
+  expect(bubblesort(arr, false)).toStrictEqual([9, 8, 6, 5, 5, 3, 1]);
 });
