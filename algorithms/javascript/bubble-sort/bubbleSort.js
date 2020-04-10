@@ -1,10 +1,10 @@
-// Bubblesort
+// Bubble Sort
 
 // One of the most naive implementations of a sorting algorithm. Every element is compared to each of the other elements and swapped if out of order. This is repeated until all elements are in the correct order.
 
 // Bubblesort is O(n^2) time complexity but O(1) space complexity.
 
-function bubblesort(arr, isAscending = true) {
+function bubbleSort(arr, isAscending = true) {
   function swap(i, j) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
@@ -25,4 +25,4 @@ function bubblesort(arr, isAscending = true) {
   return arr;
 }
 
-module.exports = { bubblesort };
+module.exports = { bubbleSort };

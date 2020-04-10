@@ -1,6 +1,6 @@
-// Insertionsort
+// Insertion Sort
 
-function insertionsort(arr, isAscending = true) {
+function insertionSort(arr, isAscending = true) {
   function swap(left, right) {
     [arr[left], arr[right]] = [arr[right], arr[left]];
   }
@@ -16,4 +16,4 @@ function insertionsort(arr, isAscending = true) {
   return arr;
 }
 
-module.exports = { insertionsort };
+module.exports = { insertionSort };
