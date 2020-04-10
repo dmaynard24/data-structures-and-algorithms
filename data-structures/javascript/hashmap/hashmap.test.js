@@ -1,4 +1,4 @@
-const { HashMap } = require(`./hashmap`);
+const { HashMap } = require(`./HashMap`);
 
 const myHashMap = new HashMap();
 

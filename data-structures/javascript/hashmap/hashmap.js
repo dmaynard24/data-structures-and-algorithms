@@ -1,4 +1,4 @@
-// Hashmap
+// HashMap
 
 // A hashmap is a data structure that implements an associative array and stores data in key/value pairs. To access a value, one must know its key.
 
