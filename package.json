@@ -17,8 +17,8 @@
   "scripts": {
     "test": "jest",
     "yapf": "yapf -ir --style=\"{indent_width: 2}\" files .",
-    "lint": "eslint algorithms/ data-structures/ --fix",
-    "format": "prettier algorithms/**/*.js data-structures/**/*.js --write",
+    "lint": "eslint javascript/ --fix",
+    "format": "prettier javascript/**/*.js --write",
     "prepare": "husky install"
   },
   "repository": {
