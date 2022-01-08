@@ -1,4 +1,4 @@
-const { buildMinHeap, minHeapify, buildMaxHeap, maxHeapify } = require(`../../../data-structures/javascript/Heap/Heap`);
+const { buildMinHeap, buildMaxHeap, minHeapify, maxHeapify } = require(`../../data-structures/Heap/Heap`);
 
 const swap = (arr, i, j) => {
   [arr[i], arr[j]] = [arr[j], arr[i]];
