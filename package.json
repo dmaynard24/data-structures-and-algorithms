@@ -10,12 +10,16 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^7.0.4",
     "jest": "^24.8.0",
     "prettier": "^1.19.1"
   },
   "scripts": {
     "test": "jest",
-    "yapf": "yapf -ir --style=\"{indent_width: 2}\" files ."
+    "yapf": "yapf -ir --style=\"{indent_width: 2}\" files .",
+    "lint": "eslint algorithms/ data-structures/ --fix",
+    "format": "prettier algorithms/**/*.js data-structures/**/*.js --write",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
