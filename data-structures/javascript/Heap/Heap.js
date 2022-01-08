@@ -54,6 +54,8 @@ const buildMinHeap = (arr) => {
 };
 
 module.exports = {
+  maxHeapify,
+  minHeapify,
   buildMaxHeap,
   buildMinHeap,
 };
