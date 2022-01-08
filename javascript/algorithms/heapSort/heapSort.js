@@ -1,8 +1,5 @@
 const { buildMinHeap, buildMaxHeap, minHeapify, maxHeapify } = require(`../../data-structures/Heap/Heap`);
-
-const swap = (arr, i, j) => {
-  [arr[i], arr[j]] = [arr[j], arr[i]];
-};
+const { swap } = require(`../../util/swap`);
 
 const heapSort = (arr, isAscending = true) => {
   if (arr.length < 1) return arr;

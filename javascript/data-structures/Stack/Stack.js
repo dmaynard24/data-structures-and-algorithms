@@ -45,7 +45,7 @@ class Stack {
 /*
  * pre-ES6 class syntax (constructor function)
  */
-function OldStack() {
+const OldStack = () => {
   // Array is used to implement stack
   this.items = [];
 
@@ -76,6 +76,6 @@ function OldStack() {
   this.print = function() {
     return this.items.join(`, `);
   };
-}
+};
 
 module.exports = { Stack, OldStack };

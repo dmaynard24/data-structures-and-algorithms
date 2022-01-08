@@ -45,7 +45,7 @@ class Queue {
 /*
  * pre-ES6 class syntax (constructor function)
  */
-function OldQueue() {
+const OldQueue = () => {
   // Array is used to implement queue
   this.items = [];
 
@@ -76,6 +76,6 @@ function OldQueue() {
   this.print = function() {
     return this.items.join(`, `);
   };
-}
+};
 
 module.exports = { Queue, OldQueue };

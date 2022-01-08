@@ -2,8 +2,8 @@
 
 // Search algorithm that only works on arrays sorted ascendingly by repeatedly dividing the search interval in half.
 
-function binarySearch(arr, target) {
-  function binarySearchRecursive(left, right) {
+const binarySearch = (arr, target) => {
+  const binarySearchRecursive = (left, right) => {
     if (arr[left] === target) {
       return left;
     }
@@ -24,9 +24,9 @@ function binarySearch(arr, target) {
     }
 
     return -1;
-  }
+  };
 
   return binarySearchRecursive(0, arr.length - 1);
-}
+};
 
 module.exports = { binarySearch };

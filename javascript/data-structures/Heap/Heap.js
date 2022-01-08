@@ -1,9 +1,7 @@
+const { swap } = require(`../../util/swap`);
+
 const getLeftIndex = (i) => 2 * i + 1;
 const getRightIndex = (i) => 2 * i + 2;
-
-const swap = (arr, i, j) => {
-  [arr[i], arr[j]] = [arr[j], arr[i]];
-};
 
 const maxHeapify = (arr, i) => {
   const leftIndex = getLeftIndex(i);

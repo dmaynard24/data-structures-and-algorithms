@@ -1,7 +1,7 @@
 // Merge Sort
 
-function mergeSort(arr, isAscending = true) {
-  function mergeHalves(left, middle, right) {
+const mergeSort = (arr, isAscending = true) => {
+  const mergeHalves = (left, middle, right) => {
     let temp = [];
     let leftStart = left;
     let rightStart = middle + 1;
@@ -24,20 +24,20 @@ function mergeSort(arr, isAscending = true) {
     }
 
     arr.splice(left, size, ...temp);
-  }
+  };
 
-  function mergeSortRecursive(left, right) {
+  const mergeSortRecursive = (left, right) => {
     if (left < right) {
       const middle = Math.floor((left + right) / 2);
       mergeSortRecursive(left, middle);
       mergeSortRecursive(middle + 1, right);
       mergeHalves(left, middle, right);
     }
-  }
+  };
 
   mergeSortRecursive(0, arr.length - 1);
 
   return arr;
-}
+};
 
 module.exports = { mergeSort };

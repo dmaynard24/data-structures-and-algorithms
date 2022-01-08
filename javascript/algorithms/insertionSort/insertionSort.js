@@ -1,19 +1,17 @@
+const { swap } = require(`../../util/swap`);
+
 // Insertion Sort
 
-function insertionSort(arr, isAscending = true) {
-  function swap(left, right) {
-    [arr[left], arr[right]] = [arr[right], arr[left]];
-  }
-
+const insertionSort = (arr, isAscending = true) => {
   for (let start = 1; start < arr.length; start++) {
     let j = start;
     while (j > 0 && arr[j - 1] > arr[j] === isAscending) {
-      swap(j - 1, j);
+      swap(arr, j - 1, j);
       j -= 1;
     }
   }
 
   return arr;
-}
+};
 
 module.exports = { insertionSort };
