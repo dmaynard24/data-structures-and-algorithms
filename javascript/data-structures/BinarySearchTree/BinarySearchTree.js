@@ -52,7 +52,6 @@ class BinarySearchTree {
   }
 
   rank(t) {
-    if (!this.root) return rankVal;
     return this.rankAt(this.root, t);
   }
 
@@ -86,6 +85,6 @@ binarySearchTree.insert(14);
 binarySearchTree.insert(20);
 binarySearchTree.insert(37);
 binarySearchTree.insert(48);
-console.log(binarySearchTree.rank(29));
+console.log(binarySearchTree.rank(39));
 
 module.exports = { BinarySearchTree };
